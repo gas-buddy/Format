@@ -42,13 +42,13 @@ class NumberFormatterTests: XCTestCase {
     }
 
     func testDecimalFormattingFour() {
-        let number = M_PI
+        let number = Double.pi
         let formattedNumber = number.format(Decimals.four)
         XCTAssertEqual(formattedNumber, "3.1416")
     }
     
     func testDecimalFormattingEuropean() {
-        let number = M_PI
+        let number = Double.pi
         let frenchLocale = Locale(identifier: "FR")
         let formattedNumber = number.format(Decimals.two, locale: frenchLocale)
         XCTAssertEqual(formattedNumber, "3,14")
