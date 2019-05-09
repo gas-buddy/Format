@@ -18,7 +18,7 @@ public extension CLPlacemark {
      - returns: Formatted address string.
      */
     @available(iOS, deprecated: 9.0)
-    public func format() -> String {
+    func format() -> String {
         // Uses deprecated Address book keys since there's no interoperability between CLPlacemark and ContactsKit yet.
         guard let addressDictionary = self.addressDictionary else {
             return ""
